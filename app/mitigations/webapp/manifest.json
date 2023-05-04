@@ -25,6 +25,18 @@
           "odataVersion": "4.0"
         }
       }
+    },
+    "crossNavigation": {
+      "inbounds": {
+        "Mitigations-display": {
+          "signature": {
+            "parameters": {},
+            "additionalParameters": "allowed"
+          },
+          "semanticObject": "Mitigations",
+          "action": "display"
+        }
+      }
     }
   },
   "sap.ui": {
@@ -91,9 +103,7 @@
         "controlId": "app",
         "controlAggregation": "pages",
         "bypassed": {
-          "target": [
-            "notFound"
-          ]
+          "target": ["notFound"]
         },
         "async": true
       },
@@ -101,16 +111,12 @@
         {
           "pattern": "",
           "name": "worklist",
-          "target": [
-            "worklist"
-          ]
+          "target": ["worklist"]
         },
         {
           "pattern": "Mitigations/{objectId}",
           "name": "object",
-          "target": [
-            "object"
-          ]
+          "target": ["object"]
         }
       ],
       "targets": {
