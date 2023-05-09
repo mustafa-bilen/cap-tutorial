@@ -97,6 +97,7 @@ modules:
         parameters:
           content-target: true
     build-parameters:
+      ignore: ["node_modules/"]
       build-result: resources
       requires:
         - artifacts:
