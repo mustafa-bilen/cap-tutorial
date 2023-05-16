@@ -19,10 +19,9 @@
     "sqlite3": "^5"
   },
   "scripts": {
-    "start": "cds-serve build:cf",
+    "start": "cds-serve",
     "watch-risks": "cds watch --open risks/webapp/index.html?sap-ui-xx-viewCache=false",
-    "watch-mitigations": "cds watch --open mitigations/webapp/index.html?sap-ui-xx-viewCache=false",
-    "build:cf": "cds build --production"
+    "watch-mitigations": "cds watch --open mitigations/webapp/index.html?sap-ui-xx-viewCache=false"
   },
   "sapux": [
     "app/risks",

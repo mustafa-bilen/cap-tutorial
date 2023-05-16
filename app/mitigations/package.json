@@ -10,7 +10,7 @@
   "main": "webapp/index.html",
   "scripts": {
     "deploy-config": "npx -p @sap/ux-ui5-tooling fiori add deploy-config cf",
-    "build:cf": "cds build --production"
+    "build:cf": "ui5 build preload --clean-dest --config ui5.yaml  --include-task=generateCachebusterInfo"
   },
   "devDependencies": {}
 }

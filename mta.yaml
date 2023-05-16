@@ -73,7 +73,7 @@ modules:
     type: html5
     path: app/risks
     build-parameters:
-      build-result: resources
+      build-result: dist
       builder: custom
       commands:
         - npm install
@@ -83,7 +83,7 @@ modules:
     type: html5
     path: app/mitigations
     build-parameters:
-      build-result: resources
+      build-result: dist
       builder: custom
       commands:
         - npm install
@@ -97,17 +97,16 @@ modules:
         parameters:
           content-target: true
     build-parameters:
-      ignore: ["node_modules/"]
       build-result: resources
       requires:
         - artifacts:
             - nsrisks.zip
           name: nsrisks
-          target-path: dist/
+          target-path: resources/
         - artifacts:
             - nsmitigations.zip
           name: nsmitigations
-          target-path: dist/
+          target-path: resources/
 
 resources:
   - name: cpapp-db

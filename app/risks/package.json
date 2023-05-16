@@ -10,10 +10,7 @@
   "main": "webapp/index.html",
   "scripts": {
     "deploy-config": "npx -p @sap/ux-ui5-tooling fiori add deploy-config cf",
-    "undeploy": "cf undeploy undefined --delete-services --delete-service-keys --delete-service-brokers",
-    "build": "rimraf resources mta_archives && mbt build --mtar archive",
-    "deploy": "cf deploy mta_archives/archive.mtar --retries 1",
-    "build:cf": "cds build --production"
+    "build:cf": "ui5 build preload --clean-dest --config ui5.yaml  --include-task=generateCachebusterInfo"
   },
   "devDependencies": {
     "rimraf": "^3.0.2"
